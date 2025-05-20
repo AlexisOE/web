@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFounders | Eventos</title>
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
+        /* === Estilos Compartidos (Globales) === */
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+.main-header {
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo i {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.logo h1 {
+    font-size: 1.3rem;
+    color: var(--dark);
+}
+
+/* Navegación */
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+    color: var(--primary);
+}
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-notification {
+    color: #555;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.btn-notification:hover {
+    color: var(--primary);
+}
+
+.user-profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    background: var(--dark);
+    color: white;
+}
+
+.main-footer .container p {
+    margin: 0;
+}
+        /* Estilos específicos de eventos */
+        .events-hero {
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .events-hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .filter-options {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .filter-options select, .filter-options button {
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .filter-options button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .events-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        .event-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        .event-image {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+        }
+        .event-info {
+            padding: 1.5rem;
+        }
+        .event-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .event-info h3 {
+            margin-bottom: 0.5rem;
+        }
+        .event-location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+        .btn-event {
+            display: inline-block;
+            width: 100%;
+            padding: 0.7rem;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn-event:hover {
+            background: var(--secondary);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-network-wired"></i>
+                <h1>TechFounders</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Inicio</a></li>
+                    <li><a href="miembros.html">Miembros</a></li>
+                    <li><a href="eventos.html" class="active">Eventos</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="foro.html">Foro</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="btn-notification"><i class="fas fa-bell"></i></a>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Perfil">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="events-hero">
+            <h2><i class="fas fa-calendar-star"></i> Eventos Tech 2024</h2>
+            <p>Conferencias, hackathones y meetups para hacer crecer tu startup</p>
+        </div>
+
+        <div class="filter-options">
+            <select>
+                <option>Todos los eventos</option>
+                <option>Presenciales</option>
+                <option>Virtuales</option>
+            </select>
+            <select>
+                <option>Todas las categorías</option>
+                <option>Financiamiento</option>
+                <option>Desarrollo</option>
+                <option>Networking</option>
+            </select>
+            <button><i class="fas fa-filter"></i> Filtrar</button>
+        </div>
+
+        <div class="events-list">
+            <!-- Evento 1 -->
+            <div class="event-card">
+                <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="event-info">
+                    <div class="event-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>15 Mayo, 2024 | 18:00 GMT-5</span>
+                    </div>
+                    <h3>Webinar: Cómo Levantar Capital en 2024</h3>
+                    <div class="event-location">
+                        <i class="fas fa-video"></i>
+                        <span>Virtual (Zoom)</span>
+                    </div>
+                    <a href="https://www.eventbrite.com" target="_blank" class="btn-event">Registrarse</a>
+                </div>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="event-card">
+                <div class="event-image" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="event-info">
+                    <div class="event-date">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>25 Mayo, 2024 | 09:00 GMT-5</span>
+                    </div>
+                    <h3>Hackathon Global Tech</h3>
+                    <div class="event-location">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Virtual (Discord)</span>
+                    </div>
+                    <a href="https://www.eventbrite.com" target="_blank" class="btn-event">Participar</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 TechFounders Network. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filtrado simulado
+        document.querySelector('.filter-options button').addEventListener('click', () => {
+            alert('Filtros aplicados (simulado)');
+        });
+    </script>
+</body>
+</html>

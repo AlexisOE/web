@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFounders | Recursos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .main-header {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .logo h1 {
+            font-size: 1.3rem;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover, 
+        .main-nav a.active {
+            color: var(--primary);
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-notification {
+            color: #555;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .btn-notification:hover {
+            color: var(--primary);
+        }
+
+        .user-profile img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Resource Grid */
+        .grid-resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .resource-card h3 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: var(--dark);
+        }
+
+        .resource-card ul {
+            list-style: none;
+        }
+
+        .resource-card li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+
+        .resource-card li:before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .resource-card a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .resource-card a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .main-footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            background: var(--dark);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-network-wired"></i>
+                <h1>TechFounders</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Inicio</a></li>
+                    <li><a href="miembros.html">Miembros</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="recursos.html" class="active">Recursos</a></li>
+                    <li><a href="foro.html">Foro</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="btn-notification"><i class="fas fa-bell"></i></a>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Perfil">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-toolbox"></i> Recursos para Emprendedores</h2>
+            <p>Herramientas esenciales para hacer crecer tu startup tech</p>
+        </div>
+
+        <div class="grid-resources">
+            <!-- Tarjeta 1 -->
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Desarrollo</h3>
+                <ul>
+                    <li><a href="https://github.com" target="_blank">GitHub</a> - Colaboración en código</li>
+                    <li><a href="https://figma.com" target="_blank">Figma</a> - Diseño de interfaces</li>
+                    <li><a href="https://vercel.com" target="_blank">Vercel</a> - Deployment rápido</li>
+                    <li><a href="https://codepen.io" target="_blank">CodePen</a> - Prototipado rápido</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Crecimiento</h3>
+                <ul>
+                    <li><a href="https://www.producthunt.com" target="_blank">Product Hunt</a> - Lanzamientos</li>
+                    <li><a href="https://trello.com" target="_blank">Trello</a> - Gestión de proyectos</li>
+                    <li><a href="https://notion.so" target="_blank">Notion</a> - Organización integral</li>
+                    <li><a href="https://mailchimp.com" target="_blank">Mailchimp</a> - Email marketing</li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h3>Financiamiento</h3>
+                <ul>
+                    <li><a href="https://www.ycombinator.com" target="_blank">Y Combinator</a> - Guía para startups</li>
+                    <li><a href="https://angel.co" target="_blank">AngelList</a> - Conexión con inversores</li>
+                    <li><a href="https://www.crunchbase.com" target="_blank">Crunchbase</a> - Datos de funding</li>
+                    <li><a href="https://stripe.com" target="_blank">Stripe</a> - Pagos online</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 TechFounders Network. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Función para resaltar cards al pasar el mouse
+        document.querySelectorAll('.resource-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFounders | Foro</title>
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+        }
+        /* === Estilos Compartidos (Globales) === */
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+.main-header {
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo i {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.logo h1 {
+    font-size: 1.3rem;
+    color: var(--dark);
+}
+
+/* Navegación */
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+    color: var(--primary);
+}
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-notification {
+    color: #555;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.btn-notification:hover {
+    color: var(--primary);
+}
+
+.user-profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+    background: var(--dark);
+    color: white;
+}
+
+.main-footer .container p {
+    margin: 0;
+}
+        /* Estilos específicos del foro */
+        .forum-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        .btn-new-topic {
+            padding: 0.7rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn-new-topic:hover {
+            background: var(--secondary);
+        }
+        .forum-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .category-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        .category-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .topic-list {
+            list-style: none;
+        }
+        .topic-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .topic-item a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .topic-item a:hover {
+            color: var(--primary);
+        }
+        .topic-meta {
+            display: flex;
+            gap: 1rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-network-wired"></i>
+                <h1>TechFounders</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Inicio</a></li>
+                    <li><a href="miembros.html">Miembros</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="foro.html" class="active">Foro</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#" class="btn-notification"><i class="fas fa-bell"></i></a>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Perfil">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="forum-header">
+            <h2><i class="fas fa-comments"></i> Comunidad TechFounders</h2>
+            <button class="btn-new-topic"><i class="fas fa-plus"></i> Nuevo Tema</button>
+        </div>
+
+        <div class="forum-categories">
+            <!-- Categoría 1 -->
+            <div class="category-card">
+                <h3><i class="fas fa-users"></i> Busco Socio</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="#">¿Buscas cofundador para startup de AI?</a>
+                        <div class="topic-meta">
+                            <span><i class="fas fa-user"></i> Juan Pérez</span>
+                            <span><i class="far fa-comment"></i> 5 respuestas</span>
+                        </div>
+                    </li>
+                    <li class="topic-item">
+                        <a href="#">Diseñador UX/UI buscando equipo</a>
+                        <div class="topic-meta">
+                            <span><i class="fas fa-user"></i> María Gómez</span>
+                            <span><i class="far fa-comment"></i> 2 respuestas</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Categoría 2 -->
+            <div class="category-card">
+                <h3><i class="fas fa-lightbulb"></i> Feedback Proyectos</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="#">¿Qué opinan de mi MVP de fintech?</a>
+                        <div class="topic-meta">
+                            <span><i class="fas fa-user"></i> Carlos Ruiz</span>
+                            <span><i class="far fa-comment"></i> 12 respuestas</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Categoría 3 -->
+            <div class="category-card">
+                <h3><i class="fas fa-question-circle"></i> Preguntas Técnicas</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <a href="#">¿Cómo escalar mi API en Node.js?</a>
+                        <div class="topic-meta">
+                            <span><i class="fas fa-user"></i> Ana López</span>
+                            <span><i class="far fa-comment"></i> 7 respuestas</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 TechFounders Network. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simular creación de nuevo tema
+        document.querySelector('.btn-new-topic').addEventListener('click', () => {
+            alert('Redirigiendo a formulario de nuevo tema...');
+        });
+    </script>
+</body>
+</html>
